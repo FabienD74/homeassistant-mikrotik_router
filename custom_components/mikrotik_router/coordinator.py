@@ -769,15 +769,16 @@ class MikrotikCoordinator(DataUpdateCoordinator[None]):
                 {"name": "rx-total", "default": 0.0},
                 {"name": "tx-total", "default": 0.0},
             ],
-            skip=[
-                {"name": "type", "value": "bridge"},
-                {"name": "type", "value": "ppp-in"},
-                {"name": "type", "value": "pptp-in"},
-                {"name": "type", "value": "sstp-in"},
-                {"name": "type", "value": "l2tp-in"},
-                {"name": "type", "value": "pppoe-in"},
-                {"name": "type", "value": "ovpn-in"},
-            ],
+# FDES ALLOW BRIDGE and all kind of interfaces
+#            skip=[
+#                {"name": "type", "value": "bridge"},
+#                {"name": "type", "value": "ppp-in"},
+#                {"name": "type", "value": "pptp-in"},
+#                {"name": "type", "value": "sstp-in"},
+#                {"name": "type", "value": "l2tp-in"},
+#                {"name": "type", "value": "pppoe-in"},
+#                {"name": "type", "value": "ovpn-in"},
+#            ],
         )
 
         if self.option_sensor_port_traffic:
@@ -814,15 +815,16 @@ class MikrotikCoordinator(DataUpdateCoordinator[None]):
                 {"name": "poe-out", "default": "N/A"},
                 {"name": "sfp-shutdown-temperature", "default": 0},
             ],
-            skip=[
-                {"name": "type", "value": "bridge"},
-                {"name": "type", "value": "ppp-in"},
-                {"name": "type", "value": "pptp-in"},
-                {"name": "type", "value": "sstp-in"},
-                {"name": "type", "value": "l2tp-in"},
-                {"name": "type", "value": "pppoe-in"},
-                {"name": "type", "value": "ovpn-in"},
-            ],
+# FDES ALLOW BRIDGE and all kind of interfaces
+#            skip=[
+#                {"name": "type", "value": "bridge"},
+#                {"name": "type", "value": "ppp-in"},
+#                {"name": "type", "value": "pptp-in"},
+#                {"name": "type", "value": "sstp-in"},
+#                {"name": "type", "value": "l2tp-in"},
+#                {"name": "type", "value": "pppoe-in"},
+#                {"name": "type", "value": "ovpn-in"},
+#            ],
         )
 
         # Udpate virtual interfaces

@@ -46,11 +46,12 @@ def _skip_sensor(config_entry, entity_description, data, uid) -> bool:
     ):
         return True
 
-    if (
-        entity_description.func == "MikrotikInterfaceTrafficSensor"
-        and data[uid]["type"] == "bridge"
-    ):
-        return True
+# FDES: ALLOW BRIDGE
+#    if (
+#        entity_description.func == "MikrotikInterfaceTrafficSensor"
+#        and data[uid]["type"] == "bridge"
+#    ):
+#        return True
 
     if (
         entity_description.data_path == "client_traffic"
